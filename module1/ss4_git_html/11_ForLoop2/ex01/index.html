@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body style="text-align: center">
+<h1 >BẢNG CỬU CHƯƠNG</h1>
+<script>
+    let table = "<table border='1' style='margin-left: 25%'>";
+    for (let i = 1; i < 10; i++) {
+        table = table + "<tr>";
+        for (let j = 1; j < 10; j++) {
+            product = i * j;
+            table = table + "<td>" + i + " x " + j + " = " + product + "</td>";
+        }
+        table = table + "</tr>";
+    }
+    table = table + "</table>";
+    document.write(table);
+</script>
+</body>
+</html>

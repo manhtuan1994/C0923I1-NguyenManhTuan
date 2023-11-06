@@ -1,0 +1,15 @@
+table{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 500px;
+    height: 500px;
+}
+td {
+    border: 1px solid black;
+}
+tr:nth-child(even) td:nth-child(odd),
+tr:nth-child(odd) td:nth-child(even)
+/*những thẻ tr chẵn có td lẻ và những thẻ tr lẻ có td chẵn*/
+{
+    background: black;
+}

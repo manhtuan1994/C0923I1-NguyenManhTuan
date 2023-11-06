@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkSoNguyenTo(n) {
+        // Biến count dùng để đếm số ước, countSNT dùng để đếm số lượng số NT
+        let count = 0;
+        let countSNT = 0;
+        for (let i = 2; i < 1000; i++) {
+            if (countSNT < n) { // nếu số lượng SNT nhỏ hơn số n nhập vào thì đi xét
+                for (let j = 1; j <= i; j++) {
+                    if (i % j === 0) { // Xét SNT
+                        count++; //tăng biến count lên
+                    }
+                }
+                if (count == 2) { //nếu count == 2 tức là có 2 ước : 1 và chính nó
+                    document.write(i + "<br>");
+                    countSNT += 1; // tăng số lượng SNT lên
+                }
+                count = 0; //reset biến count để quay lại vòng lặp
+            } else {
+                break;
+            }
+        }
+    }
+
+    function kiemTraSoNT(n) {
+        count = 0;
+        countSNT = 0;
+        for (let i = 2; i <= 1000; i++) {
+            if (countSNT < n) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % j === 0) {
+                        count++;
+                    }
+                }
+                if (count == 2) {
+                    document.write(i + "<br>");
+                    countSNT++;
+                }
+                count = 0;
+            }else
+                {
+                    break;
+                }
+            }
+    }
+
+    let number = parseInt(prompt("Nhập số n: "));
+    // checkSoNguyenTo(number);
+    // document.write("<br><br>")
+    kiemTraSoNT(number);
+
+</script>
+</body>
+</html>

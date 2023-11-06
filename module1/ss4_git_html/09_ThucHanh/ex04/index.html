@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="number" min="1" max="12" id="month" placeholder="Nhập tháng" style="width:10%">
+<button onclick="checkMonth()">Check</button>
+<p id="result"></p>
+
+<script>
+   function checkMonth(){
+       let month = parseInt(document.getElementById("month").value);
+       result = "";
+       switch (month){
+           case 1:
+           case 3:
+           case 5:
+           case 7:
+           case 8:
+           case 10:
+           case 12:
+               result = "có 31 ngày";
+               break;
+           case 4:
+           case 6:
+           case 9:
+           case 11:
+               result = "có 30 ngày";
+               break;
+           case 2 :
+               result = "có 28 hoặc 29 ngày";
+               break;
+           default :
+               result = "Invalid";
+       }
+       document.getElementById("result").innerHTML = "Tháng " + month + " " + result;
+   }
+</script>
+
+</body>
+</html>

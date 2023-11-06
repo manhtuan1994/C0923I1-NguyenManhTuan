@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="word">
+<button onclick="translator()">Dịch</button>
+<p id="result"></p>
+<script>
+    function translator(){
+        let word = document.getElementById("word").value;
+        let result = document.getElementById("result");
+        let eng = ["apple","banana","hello","bye"];
+        let viet = ["táo","chuối","chào","biệt"];
+        for (let i = 0 ; i <= eng.length; i++){
+            if (eng[i].includes(word)){
+                result.innerHTML = viet[i];
+                break;
+            }else {
+                result.innerHTML = "Không tồn tại";
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>What is the “official” name of JavaScript? </h2>
+<input size="35%" id="answer" placeholder="Type your answer here">
+<button onclick="checkName()">Submit</button>
+<script>
+    function checkName() {
+        let value = document.getElementById("answer").value;
+        if (value == 'ECMAScript') {
+            alert('Right!');
+        } else {
+            alert("You don't know? ECMAScript!");
+        }
+    }
+</script>
+</body>
+</html>

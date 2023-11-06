@@ -1,0 +1,16 @@
+tr td:first-child {
+    color: red;
+}
+tr th:first-child {
+    background: red;
+}
+tr th{
+    color: white;
+    background: #f3b906;
+}
+tr th:last-child {
+    background: blue;
+}
+tr td:last-child {
+    color: blue;
+}

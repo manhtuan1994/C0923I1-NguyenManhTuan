@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="padding: 100px 0 0 35%">
+    <h1>DO YOU LOVE ME ?</h1>
+    <button style="margin-right: 50px" onclick="btnYes()">Yes</button>
+    <input type="button" id="No" value="NO" onmouseover="btnNo()" style="position:absolute;"/>
+</div>
+<script>
+    function btnYes(){
+        alert("Yes sir, chắc chắn là như vậy rồi");
+    }
+    function btnNo(){
+        var x = Math.round(Math.random() * window.innerHeight);
+        var y = Math.round(Math.random() * window.innerWidth);
+        document.getElementById("No").style.left = x + 'px';
+        document.getElementById("No").style.top = y + 'px';
+    }
+</script>
+</body>
+</html>
